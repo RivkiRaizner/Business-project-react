@@ -7,7 +7,7 @@ const About_us=()=>{
       <div>
          <Link to="/">Home</Link>
          <p>
-            בלה בלה בלה
+             בלה בלה בלה בלה
             </p>
       </div>  
     )
