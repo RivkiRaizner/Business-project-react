@@ -1,7 +1,7 @@
 import '../index.css';
 // import About_us from "./About_us";
 // import Schedule_meeting from "./Schedule_meeting";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 const Home = () => {
 
     return (
