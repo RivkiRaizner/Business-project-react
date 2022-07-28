@@ -9,6 +9,8 @@ const Home = () => {
             {/* <About_us/> */}
             <Link to="/about_us">About us</Link>
             <Link to="/schedule_meeting">schedule a meeting</Link>
+            <Link to="/login_manager">login manager</Link>
+
             
         </div>
     )
