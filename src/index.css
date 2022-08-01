@@ -12,7 +12,9 @@ code {
     monospace;
 }
 #menu{
+  background-image:url('../public/abstract-blur-defocused-shopping-mall.jpg');
   display:flex;
   text-align:center;
-
+  width: 100%;
+  height:100%;
 }
