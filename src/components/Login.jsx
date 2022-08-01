@@ -2,34 +2,44 @@ import React from "react";
 import { useState } from "react";
 import axios from 'axios';
 import Button from '@material-ui/core/Button'
-import Put_user_details from './Put_user_details'
+// import Put_user_details from './Put_user_details'
 
 
 const Login=()=>
 {
 const [name,setName]=useState(" ");
 const [password,setPassword]=useState(" ");
-const id="3f979457-2d01-4d11-a8a3-84fe7d2cfb41";
+// const id="473d5602-67d0-49ab-ad9f-a03d02f549ab";
 
  
- const sumbitLogin= async() => {
-    try{ let dataManeger=await axios.get(`https://meetings-test.herokuapp.com/user/${id}`);
-        if(dataManeger.data.password===password && dataManeger.data.username===name)
-            <Put_user_details id={id}/>
-         }
-    catch (err){
-        console.error(err); 
-    }
+ const handleSubmit= async() => {
    
-
-  }
-
+    const userData={ 
+        "username": name,
+        "password": password
+    };
+  
+    const result = userLogin(userData);
+    alert(result);
+    if(result)
+        window.open('./Put_user_details')
+     
+    };
+ 
+      const userLogin=async(userData)=>{
+        try{
+            return await axios.post("https://meetings-test.herokuapp.com/user/signin ", userData)
+        }
+         catch{
+            console.log('error to signin')
+         }
+    }
 
     return(
         <>
-            <input type="text" placeholder="userName"  onChange={(e) => setName(e.target.value)}></input>
-            <input type="text" placeholder="password" onChange={(e) => setPassword(e.target.value)}></input>
-            <Button  onClick={() => {sumbitLogin();}} >Login</Button>
+            <input type="text" placeholder="userName"  onChange={(e) => setName(e.target.value)}></input><br/> <br/><br/>
+            <input type="text" placeholder="password" onChange={(e) => setPassword(e.target.value)}></input><br/> <br/><br/>
+            <Button  onClick={() => {handleSubmit()}} >Login</Button>
         </>
     )
 }

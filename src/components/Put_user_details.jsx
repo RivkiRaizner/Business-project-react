@@ -1,13 +1,14 @@
 // import { Link } from "react-router-dom";
-// import React from "react";
+import React from "react";
 import {axios} from 'axios';
 import Button from '@material-ui/core/Button'
 
 
 const Put_user_details =async (props) =>{
-    const {id}=props;
+    const id=props.oo;
     let businessDetails;
     try{ 
+            // eslint-disable-next-line no-unused-vars
             businessDetails = await axios.get(`https://meetings-test.herokuapp.com/business/${id}`);
     }catch (err) {
 
@@ -38,4 +39,4 @@ const saveServiceInBusiness = () => {
 alert('Service In Business saved successfully')
 
 }
-export default Put_user_details();
+export default Put_user_details;
