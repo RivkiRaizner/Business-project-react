@@ -20,19 +20,19 @@ const Home = () => {
             <p>
                 wedding dress
             </p>
-            <button onClick={ () => navigate('/createMeetingService', { state: { business: " wedding dress" } }) }>create meeting </button>
+            <button onClick={ () => navigate('/createMeetingService', { state: { businessId: '4bed7e06-00a0-4a5c-8185-794e1f909be0' } }) }>create meeting </button>
             </div>
             <div id="OrderingGifts">
             <p>
-                 Ordering gifts
+                 Mortgage advice
             </p>
-            <button onClick={() => navigate('/createMeetingService',)}>create meeting </button>
+            <button onClick={() => navigate('/createMeetingService',{ state: { businessId: '7ea10246-38d0-4685-a3e6-3daaf363c6fa' }})}>create meeting </button>
             </div>
             <div id="MortgageAdvice">
             <p>
-                Mortgage advice
+                 Ordering gifts
             </p>
-            <button onClick={() => navigate('/createMeetingService')}>create meeting </button>
+            <button onClick={() => navigate('/createMeetingService',{ state: { businessId: '2624cf9b-9a4d-47d7-80ca-4f59b8ab7ce3' }})}>create meeting </button>
             </div>
             
           
