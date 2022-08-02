@@ -11,11 +11,13 @@ const Home = () => {
 
     
     return (
-        <div id="menu">
+        <div id="menu" >
             {/* <About_us/> */}
+            <div id="links">
             <Link to="/about_us">About us</Link>
             <Link to="/schedule_meeting">schedule a meeting</Link>
             <Link to="/login_manager">login manager</Link>
+            </div>
             <div id=" weddingDress">
             <p>
                 wedding dress
